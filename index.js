@@ -101,18 +101,18 @@ function getRoundWinner() {
   let player1 = player1Dice.textContent
   let player2 = player2Dice.textContent
   if (player1 > player2) {
-    player1Message.textContent = 'Round Winner'
+    player1Message.textContent = `Round ${roundMessage.textContent} winner`
     player2Message.textContent = '\u00a0'
     player2Dice.classList.remove('active')
     player1Dice.classList.add('active')
   } else if (player1 < player2) {
-    player2Message.textContent = 'Round Winner'
+    player2Message.textContent = `Round ${roundMessage.textContent} winner`
     player1Message.textContent = '\u00a0'
     player1Dice.classList.remove('active')
     player2Dice.classList.add('active')
   } else {
-    player2Message.textContent = 'Draw'
-    player1Message.textContent = 'Draw'
+    player2Message.textContent = `Round ${roundMessage.textContent} tied`
+    player1Message.textContent = `Round ${roundMessage.textContent} tied`
     player1Dice.classList.add('active')
     player2Dice.classList.add('active')
   }
@@ -120,7 +120,7 @@ function getRoundWinner() {
 
 function checkWhoWon() {
   if (player1Score >= 20) {
-    player1Message.textContent = 'Player 1 won'
+    player1Message.textContent = 'Player 1 won the game'
     player2Message.textContent = '\u00a0'
     player2Dice.classList.remove('active')
     player1Dice.classList.remove('active')
@@ -129,7 +129,7 @@ function checkWhoWon() {
     showResetButton()
   } else if (player2Score >= 20) {
     player1Message.textContent = '\u00a0'
-    player2Message.textContent = 'Player 2 won'
+    player2Message.textContent = 'Player 2 won the game'
     player1Dice.classList.remove('active')
     player2Dice.classList.remove('active')
     player1Dice.classList.remove('won')
