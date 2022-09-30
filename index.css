@@ -1,10 +1,11 @@
 :root {
   --primary-light: #f1f8e9;
   --primary-lightmedium: #c5e1a5;
-  --primary-medium: #9ccc65;
+  --primary-medium: #9ccc65; /* green */
   --primary-dark: #7cb342;
   --primary-deepdark: #558b2f;
   --primary-contrast: #515151;
+  --secondary-medium: #FFBF00; /* gold */
   
   --primary-font: sans-serif;
   --secondary-font: serif;
@@ -98,6 +99,10 @@ body {
   border: 5px solid rgba(0, 0, 0, 20%);
 }
 
+.scoreboard>.score>.won {
+  background-color: var(--secondary-medium);
+}
+
 .buttons {
   display: grid;
   grid-gap: 1rem;
@@ -119,7 +124,15 @@ body {
   filter: brightness(.85);
 }
 
+.roll-button {
+  display: none;
+}
+
 .reset-button {
+  display: none;
+}
+
+.take-dices-button {
   display: none;
 }
 
