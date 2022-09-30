@@ -60,6 +60,7 @@ function rollDice() {
 rollButton.addEventListener('click', rollDice)
 
 function takeDices() {
+  playersTurn = !playersTurn
   player1Dice.textContent = '\u00a0'
   player2Dice.textContent = '\u00a0'
   player1Message.textContent = playersTurn ? 'Player 1 starts' : '\u00a0' 
